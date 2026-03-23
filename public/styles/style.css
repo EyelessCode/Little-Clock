@@ -64,8 +64,6 @@ body .clock{
   top: 50%;
   left: 50%;
   transform: rotate(90deg);
-  transition-timing-function:
-    cubic-bezier(0.1, 2.7, 0.58, 1);
   transition: all 0.05s;
 }
 
@@ -83,7 +81,7 @@ body .clock{
   background-color: yellow;
 }
 
-@media (min-width:415px){
+@media (min-width:600px){
   body .clock{
     /* padding: 12rem; */
     width: 25rem;
