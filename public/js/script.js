@@ -3,25 +3,25 @@ const hand_minute=document.querySelector(".hand-minute")
 const hand_second=document.querySelector(".hand-second")
 const span=document.querySelector(".dinamic-digital")
 
-const getDegreesCalculation=(value)=>{
-  const degree=((value/60)*360)+90
+const getDegreesCalculation=(time,value)=>{
+  const degree=((time/value)*360)+90
   return degree
 }
 
 const getTimeOnClock=()=>{
   const today=new Date()
   const hour=today.getHours()
-  const hourDegrees=getDegreesCalculation(hour)
+  const hourDegrees=getDegreesCalculation(hour,12)
   hand_hour.style.transform=`rotate(${
     hourDegrees}deg)`
   
   const minute=today.getMinutes()
-  const minuteDegrees=getDegreesCalculation(minute)
+  const minuteDegrees=getDegreesCalculation(minute,60)
   hand_minute.style.transform=`rotate(${
     minuteDegrees}deg)`
   
   const second=today.getSeconds()
-  const secondDegrees=getDegreesCalculation(second)
+  const secondDegrees=getDegreesCalculation(second,60)
   hand_second.style.transform=`rotate(${
     secondDegrees}deg)`
   span.style.display="flex"

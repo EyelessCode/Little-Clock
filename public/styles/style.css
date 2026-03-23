@@ -29,7 +29,6 @@ body .clock{
   margin-bottom: 50%;
   border-radius: 100%;
   backdrop-filter: blur(1.5px);
-
 }
 
 .clock .clock-face{
@@ -96,13 +95,12 @@ body .clock{
 
 @media (min-width:821px) {
   body .clock{
-    margin-bottom: initial;
+    margin-bottom: 7.5%;
     width: 21.5em;
     height: 21.5em;
   }
 
   .clock .clock-face{
-    position: relative;
     transform: translateY(-50%);
     transform: translateX(-50%);
   }
